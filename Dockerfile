@@ -5,6 +5,6 @@ RUN  cd /go/src/go-helloworld; go build
 RUN  ls -l /go/src/go-helloworld
 
 FROM alpine:3.12
-COPY --from=buildimage /go/src/go-helloworld/helloworld .
+COPY --from=buildimage /go/src/go-helloworld/go-helloworld .
 
-ENTRYPOINT ["./helloworld"]
+ENTRYPOINT ["./go-helloworld"]
